@@ -28,7 +28,10 @@
 <script>
 export default {
   props: {
-    material: {},
+    // material: {
+    //   type:Array,
+    //   required: true
+    // },
     cookurl: {
       type: String,
       required: true
@@ -69,19 +72,18 @@ export default {
               "Title":this.recipeTitle,
               "img":this.img,
               "cookurl":this.cookurl,
-              "Description":this.recipeDescription
+              "Description":this.recipeDescription,
+             
+
             }
           },
          
         ],
-        function(err, records) {
+        function(err) {
           if (err) {
-            console.error(err);
+          
             return;
           }
-          records.forEach(function(record) {
-            console.log(record.getId());
-          });
         }
       );
 
