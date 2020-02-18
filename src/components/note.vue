@@ -10,7 +10,7 @@
           <div>{{cook.Description}}</div>
         </v-card-text>
         <!-- <modal :material="cook.recipeMaterial" :cookurl="cook.cookurl"></modal> -->
-        <notemodal :cookurl="cook.cookurl"/>
+        <notemodal :cookurl="cook.cookurl" :id="cook.id"/>
       </v-card>
     </div>
   </div>
@@ -57,12 +57,13 @@ export default {
 
             records.forEach((record) => {
                 let data ={
+                   "id":record.getId(),
                    "Title":record.get('Title'),
                    "img":record.get('img'),
                    "cookurl":record.get("cookurl"),
                    "Description":record.get('Description')
                 }
-            cook.cookinfo.push(data)
+            cook.cookinfo.push(data);
             });
 
             // To fetch the next page of records, call `fetchNextPage`.
