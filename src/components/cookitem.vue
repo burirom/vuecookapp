@@ -9,19 +9,24 @@
         <v-card-text class="text--primary">
           <div>{{cook.recipeDescription}}</div>
         </v-card-text>
-        <modal :material="cook.recipeMaterial" :cookurl="cook.recipeUrl"></modal>
-       
+        <modal
+          :material="cook.recipeMaterial"
+          :cookurl="cook.recipeUrl"
+          :recipeTitle="cook.recipeTitle"
+          :recipeDescription="cook.recipeDescription"
+          :img="cook.foodImageUrl"
+        ></modal>
       </v-card>
     </div>
   </div>
 </template>
 
 <script>
-import modal from "./modal"
+import modal from "./modal";
 export default {
-    components:{
-        modal
-    },
+  components: {
+    modal
+  },
   data() {
     return {
       cookinfo: [],

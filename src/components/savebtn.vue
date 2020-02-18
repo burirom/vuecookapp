@@ -1,15 +1,11 @@
 <template>
   <div>
-      <note></note>
+       <v-btn color="success" dark>保存</v-btn>
   </div>
 </template>
 
 <script>
-import note from "../components/note"
 export default {
-  components:{
-    note
-  }
 
 }
 </script>
