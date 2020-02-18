@@ -28,10 +28,10 @@
 <script>
 export default {
   props: {
-    // material: {
-    //   type:Array,
-    //   required: true
-    // },
+    material: {
+      type:Array,
+      required: true
+    },
     cookurl: {
       type: String,
       required: true
